@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <script src="jquery-2.0.3.js"></script>
+    <script src="template.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<h1>我的留言板项目</h1>
+<button onclick="location.href='add.html'">我要留言</button>
+<hr>
+<article>
+
+
+</article>
+</body>
+</html>
+<script src="index.js"></script>
+<script id="test" type="text/html">
+    {{each list as value}}
+    <section>
+        <p>{{value.content}}</p>
+        <span>{{value.date | formatDate}}</span>
+        <span>{{value.ip | formatIp}}</span>
+    </section>
+    {{/each}}
+</script>
